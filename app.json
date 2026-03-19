@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "Solar Battery Group",
+    "slug": "sbg-consumer-app",
+    "version": "4.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "sbg",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F2A1A"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.solarbatterygroup.consumer",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "SBG needs camera access to photograph your switchboard, inverter, meter, and battery location for installation scoping.",
+        "NSPhotoLibraryUsageDescription": "SBG needs photo library access to upload site photos for installation scoping.",
+        "NSLocationWhenInUseUsageDescription": "SBG uses your location to verify installation address and find nearby installers."
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F2A1A"
+      },
+      "package": "com.solarbatterygroup.consumer",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "SBG needs camera access to photograph your switchboard, inverter, meter, and battery location."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#00C853"
+        }
+      ],
+      "expo-secure-store",
+      "expo-asset"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_EAS_PROJECT_ID"
+      }
+    }
+  }
+}
